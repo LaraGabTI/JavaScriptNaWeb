@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo String</title>
+</head>
+<body>
+    <script>
+        const nota1 = 7
+        const nota2 = 3
+        const nota3 = 10
+        const nota4 = 10
+    
+        const falta = 5;
+        const media = (nota1 + nota2 + nota3 + nota4)/4;
+        
+        if(media >= 7 || falta <= 4){
+            alert("Aprovado!");
+            console.log("Aprovado!");
+        }else if(media < 7 && media >= 5 && falta <= 4){
+            alert("Recuperação!");
+            console.log("Recuperação!");
+        }else if(media < 5 && falta <= 4){
+            alert("Reprovado!");
+            console.log("Reprovado!");
+        }else if(media < 5 && falta > 4){
+            alert("Jubilado!");
+            console.log("Jubilado!");
+        }
+
+    </script>
+</body>
+</html>

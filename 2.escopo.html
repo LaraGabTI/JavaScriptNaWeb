@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo</title>
+</head>
+<body>
+    <script>
+
+    if (1 > 0){ //escopo de bloco variavel só existe dentro do escopo de bloco local 
+        let estudante = "Lucas"; 
+        console.log(estudante);
+    }
+
+    estudante = "Ana"; // ele cria a variavel estudante forçadamente no escopo global, mas não é recomendada 
+    console.log(estudante); // ReferenceError: estudante is not defined
+    
+    </script>
+</body>
+</html>

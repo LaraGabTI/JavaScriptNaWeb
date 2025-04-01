@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo String</title>
+</head>
+<body>
+    <script>
+
+        const dataDate = new Date();
+        const dataSemana = dataDate.getDay();
+    
+        switch(dataSemana){
+                case 0:
+                    console.log("Domingo");
+                    break;
+                case 1: 
+                    console.log("Segunda-feira");
+                    break;  
+                case 2:
+                    console.log("Terça-feira");
+                    break;
+                case 3:
+                    console.log("Quarta-feira");
+                    break;     
+                case 4:
+                    console.log("Quinta-feira");
+                    break;
+                case 5:
+                    console.log("Sexta-feira");
+                    break;
+                case 6:
+                    console.log("Sábado");
+                    break;
+                default:
+                    console.log("Dia Invalido");
+            }
+
+        
+    </script>   
+</body>
+</html>

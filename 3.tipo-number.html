@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo Number</title>
+</head>
+<body>
+    <script>
+
+        const nota1 = 8;
+        const nota2 = 6.3; // valor decimal, pode ser usado como nota
+        const nota3 = -2; // valor negativo, não é recomendado usar como nota
+        const nota4 = parseInt('5'); // valor string, não é recomendado usar como nota, mas pode ser convertido para número
+        
+        const total = nota1 + nota2 + nota3 + nota4; // soma de notas, mas o valor 5 é uma string, então ele não vai somar, ele vai concatenar
+
+        console.log(total);  
+        console.log(typeof total); // typeof é uma função que retorna o tipo da variável, no caso, string
+    </script>
+</body>
+</html>

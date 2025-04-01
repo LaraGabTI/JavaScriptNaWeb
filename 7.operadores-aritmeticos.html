@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo String</title>
+</head>
+<body>
+    <script>
+
+        let nome; // Variável não inicializada, tipo indefinido
+        let telefone = null; // Variável inicializada com valor nulo
+        
+
+        console.log(typeof nome); // undefined, tipo indefinido
+        console.log(typeof telefone); // object, tipo objeto (null é considerado um objeto em JavaScript)
+
+        console.log(nome + 3); // NaN (Not a Number), resultado de uma operação inválida com undefined
+        console.log(telefone + 3); // 3, resultado de uma operação com null (null é tratado como 0 em operações matemáticas)
+        
+        const nota1 = 7
+        const nota2 = 3
+        const nota3 = 10
+        const nota4 = 10
+
+        const media = (nota1 + nota2 + nota3 + nota4)/4
+        
+        if(media>=7){
+            console.log("Aprovado!")
+        }else{
+            console.log("Reprovado!")
+        }
+
+    </script>
+</body>
+</html>
