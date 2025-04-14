@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        const operacao = (num1, num2, operacao) => {
+            switch (operacao) {
+                case "1":
+                    return num1 + num2;
+                case "2":
+                    return num1 - num2;
+                case "3":
+                    if (num2 == 0) {
+                        return "Divisão por zero não é permitida";
+                    }
+                    return num1 / num2;
+                case "4":
+                    return num1 * num2;
+                default:
+                    return "Operação inválida";
+            }
+        }
+        alert(`Escolha uma operação: 
+                1 - soma, 
+                2 - subtracao, 
+                3 - divisao, 
+                4 - multiplicacao`);
+
+        numero = prompt("Digite a operação desejada: ");
+        const num1 = parseFloat(prompt("Digite o primeiro número: "));
+        const num2 = parseFloat(prompt("Digite o segundo número: "));
+        const resultado = operacao(num1, num2, numero);
+        alert(`O resultado da operação é: ${resultado}`);
+    </script>
+    
+</body>
+</html>

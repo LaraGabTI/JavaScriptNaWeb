@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        const calcularMedia = (num1, num2, num3, num4) => ((num1 + num2 + num3 + num4) / 4);  
+        const num1 = parseFloat(prompt("Digite o primeiro número: "));
+        const num2 = parseFloat(prompt("Digite o segundo número: "));
+        const num3 = parseFloat(prompt("Digite o terceiro número: "));
+        const num4 = parseFloat(prompt("Digite o quarto número: "));
+        const resultado = calcularMedia(num1, num2, num3, num4).toFixed(2);;
+        
+        function compara(resultado) {
+            if (resultado >= 7) {
+                return "Aprovado";
+            } else if (resultado < 7 && resultado >= 5) {
+                return "Recuperação";
+            } else {
+                return "Reprovado";
+            }
+        }
+
+        const resultadoFinal = compara(resultado);
+        alert(`A média é: ${resultado} e o aluno está: ${resultadoFinal}`);
+
+    </script>
+
+</body>
+</html>

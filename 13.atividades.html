@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo String</title>
+</head>
+<body>
+    <script>
+        // positivo ou negativo
+        const positivoNegativo = (numero) => num > 0 ? "positivo" : num < 0 ? "negativo" : "zero";
+
+        const positivoOuNegativo = function (numero) {
+            if (numero > 0) {
+                return "positivo";
+            } else if (numero < 0) {
+                return "negativo";
+            } else {
+                return "zero";
+            }
+        }
+
+        const parOuImpar = (numero) => numero % 2 == 0 ? "par" : "impar";
+
+        //Operações matemáticas
+        const operacao = (num1, num2, operacao) => {
+            switch (operacao) {
+                case "soma":
+                    return num1 + num2;
+                case "subtracao":
+                    return num1 - num2;
+                case "divisao":
+                    if (num2 == 0) {
+                        return "Divisão por zero não é permitida";
+                    }
+                    return num1 / num2;
+                case "multiplicacao":
+                    return num1 * num2;
+                default:
+                    return "Operação inválida";
+            }
+        }
+
+        const fahrenheitParaCelsius = (fahrenheit) => ((fahrenheit - 32) * 5 / 9).toFixed(2);
+
+        fahrenheit= prompt("Digite a temperatura em Fahrenheit: ");
+        const celsius = fahrenheitParaCelsius(fahrenheit);
+        alert(`A temperatura em Celsius é: ${celsius}°C`);
+    </script>   
+</body>
+</html>

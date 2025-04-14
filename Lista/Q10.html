@@ -1,0 +1,33 @@
+Lista/Q8.html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        const salarioAtualiado = function(salario) {
+            if(salario <= 1630) {
+                return salario + (salario * 15 / 100);
+            } else if (salario > 1630 && salario <= 3000) {
+                return salario + (salario * 10 / 100);
+            } else if (salario > 3000 && salario <= 5000) {
+                return salario + (salario * 5 / 100);
+            } else if (salario > 5000) {
+                return salario + 100;
+            } else {
+                return "Salário inválido";
+            }
+            return salario + (salario * aumento / 100);
+        }
+
+        let valorSalario= parseFloat(prompt("Digite o valor do salario: "));
+        salarioAtualiado(valorSalario);
+        alert(`O valor do salario atualizado é: ${salarioAtualiado(valorSalario)}`);
+        
+        
+    </script>
+
+</body>
+</html>

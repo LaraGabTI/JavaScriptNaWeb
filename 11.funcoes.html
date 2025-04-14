@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo String</title>
+</head>
+<body>
+    <script>
+
+        function infoEstudante(nome, nota){
+            const info = `O estudante ${nome} obteve a nota ${nota}`;
+            return info;
+        }
+
+        const nome = "Lara";
+        const nota = 10;
+
+        const exibeInfoEstudante = infoEstudante(nome, nota);
+
+        // Funcao Expressão (Anonima)
+        const calcularMedia = function (nota1, nota2, nota3, nota4){
+            return (nota1 + nota2 + nota3 + nota4)/4;
+        }
+
+        calcularMedia(10, 8, 9, 10)
+
+        // arrow function
+        const calcularMedia2 = (nota1, nota2, nota3, nota4) => {
+            return (nota1 + nota2 + nota3 + nota4)/4;
+        }
+        
+        //arrow function
+        const calcularMedia3 = (nota1, nota2, nota3, nota4) => (nota1 + nota2 + nota3 + nota4)/4;
+        
+    </script>   
+</body>
+</html>

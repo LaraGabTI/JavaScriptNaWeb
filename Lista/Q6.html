@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        // Função para verificar se a fruta já existe na lista
+        function verificaLista(frutas, fruta) {
+            return frutas.includes(fruta);
+        }
+
+        // Função para verificar se a lista está vazia
+        function verificaListaVazia(frutas) {
+            return frutas.length;
+        }
+    
+        // Função para adicionar uma fruta ao final da lista
+        function addFruta(frutas, fruta) {
+            if(verificaLista(frutas, fruta)== true) {
+                console.log(`Fruta ${fruta} já existe na lista!`);
+                return;
+            }else{
+                frutas.push(fruta);
+                console.log(`Fruta ${fruta} adicionada!`);
+                console.log(`Lista de frutas atualizada ${frutas} `);
+                return fruta;
+            }
+        }
+
+        // Função para remover a última fruta da lista
+        function removeFruta(frutas) {
+            if(verificaListaVazia(frutas) == 0) {
+                console.log(`Não há frutas para remover!`);
+                return;
+            }else{
+                const frutaRemovida = frutas.pop();
+                console.log(`Fruta ${frutaRemovida} removida!`);
+                console.log(`Lista de frutas atualizada ${frutas} `);
+                return frutaRemovida;
+                
+            }
+        }
+
+        // Função para exibir as n primeiras frutas
+        function exibirPrimeirasFrutas(frutas, n) {
+            if(verificaListaVazia(frutas) == true) {
+                console.log(`A lista está vazia!`);
+                return;
+            }else {
+                const frutasPrimeiras = frutas.slice(0, n);
+                console.log(`As ${n} primeiras frutas são: ${frutasPrimeiras}`);
+                return frutasPrimeiras;
+            }
+        }
+
+        // Função para exibir as n últimas frutas
+        function exibirUltimasFrutas(frutas, n) {
+            if(verificaListaVazia(frutas) == true) {
+                console.log(`A lista está vazia!`);
+                return;
+            }else if (n > frutas.length) {
+                    console.log(`A lista só tem ${frutas.length} frutas!`);
+                    return;
+            }else{
+                const frutasUltimas = frutas.slice(-n);
+                console.log(`As ${n} Ultimas frutas são: ${frutasUltimas}`);
+                return frutasUltimas;
+            }
+        }
+
+        function addFrutaPosicao(frutas, posicao, fruta) {
+            if(verificaLista(frutas, fruta)== true) {
+                console.log(`Fruta ${fruta} já existe na lista!`);
+                return;
+            }else if (posicao < 0 || posicao > frutas.length + 1) {
+                console.log(`Posição inválida!`);
+                return;
+            }else{
+                frutas.splice(posicao, 0, fruta);
+                console.log(`Fruta ${fruta} adicionada na posição ${posicao}!`);
+                console.log(`Lista de frutas atualizada ${frutas} `);
+                return fruta;
+            }
+        }
+        
+        frutas = ["tomate", "Abacate", "Morango", "Melancia"];
+        let opcao;
+        
+        do{
+            console.log(`1- Adicionar uma fruta no fim da lista 
+                    2 - Remover a última fruta da lista
+                    3 - Exibir a(s) n primeiras frutas 
+                    4 - Exibir a(s) n últimas frutas
+                    5 - Adicionar uma fruta na posição n)
+                    6 - Sair`);
+            opcao = parseInt(prompt("Escolha uma opção: "));
+
+            switch (opcao){
+                case 1:
+                    const frutaAdicionar = prompt("Digite o nome da fruta a ser adicionada: ");
+                    addFruta(frutas, frutaAdicionar);
+                    break;
+                case 2:
+                    removeFruta(frutas);
+                    break;
+                case 3:
+                    const nPrimeiras = parseInt(prompt("Quantas frutas você quer exibir? "));
+                    exibirPrimeirasFrutas(frutas, nPrimeiras);
+                    break;
+                case 4:
+                    const nUltimas = parseInt(prompt("Quantas frutas você quer exibir? "));
+                    exibirUltimasFrutas(frutas, nUltimas);
+                    break;
+                case 5:
+                    const posicao = parseInt(prompt("Digite a posição que deseja adicionar a fruta: "));
+                    const frutaPosicao = prompt("Digite o nome da fruta a ser adicionada: ");
+                    addFrutaPosicao(frutas, posicao, frutaPosicao);
+                    break;
+                case 6:
+                    console.log("Saindo...");
+                    break;
+                default:
+                    console.log("Opção inválida! Tente novamente.");
+                    console.log(`Opção ${opcao} inválida! Tente novamente.`);
+                    break;
+            }
+        }while (opcao != 6 );
+
+        console.log(`Lista de frutas: ${frutas}`);
+        
+
+        // Exemplo de uso
+
+
+    </script>
+
+</body>
+</html>

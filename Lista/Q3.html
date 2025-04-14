@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        const compara3Numeros = function(lista) {
+            return lista.sort((a, b) => a - b);
+        }
+
+        const num1 = parseFloat(prompt("Digite o primeiro número: "));
+        const num2 = parseFloat(prompt("Digite o segundo número: "));
+        const num3 = parseFloat(prompt("Digite o terceiro número: "));
+
+        const lista = [num1, num2, num3];
+        const resultado = compara3Numeros(lista);
+        alert(`Ordem: ${resultado}`);
+    </script>
+    
+</body>
+</html>

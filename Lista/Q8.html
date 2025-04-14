@@ -1,0 +1,31 @@
+Lista/Q8.html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+
+        const alunos = [];
+        for(let i = 0; i <= 3; i++) {
+            let nome= prompt("Digite o nome: ");
+            let nota= parseFloat(prompt("Digite a nota: "));
+            alunos.push([nome, nota]);
+        }
+
+        //verificar se o aluno existe na lista
+        let nome = prompt("Digite o nome do aluno que deseja verificar: ");
+        for(let i = 0; i < alunos.length; i++) {
+            if(alunos[i][0] === nome) {
+                alert(`O aluno ${alunos[i][0]} tem a nota ${alunos[i][1]}`);
+            } else {
+                alert("Aluno não encontrado.");
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

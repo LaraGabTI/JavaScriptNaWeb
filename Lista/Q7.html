@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        num1 = parseFloat(prompt("Digite o primeiro número: "));
+        num2 = parseFloat(prompt("Digite o segundo número: "));
+        lista1 = [num1, num2];
+
+        num3 = parseFloat(prompt("Digite o terceiro número: "));
+        num4 = parseFloat(prompt("Digite o quarto número: "));
+        lista2 = [num3, num4];
+
+        lista3 = [...lista1, ...lista2];
+
+        alert(`Lista 1: ${lista1} \nLista 2: ${lista2} \nLista 3: ${lista3}`);
+
+
+    </script>
+
+</body>
+</html>
