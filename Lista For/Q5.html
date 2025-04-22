@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+//        Leia 10 números do usuário (usando o laço FOR) e armazene os
+// números em uma lista (array). 
+
+        let numero = 0;
+        let lista = [];
+        for(i=1; i <= 10; i++){
+                numero = Number(prompt(`Digite ${i} número: `));
+                lista.push(numero);   
+            }
+
+            //Depois, use o método forEach para mostrar apenas os números negativos.
+            lista.forEach((item) => {
+                if(item < 0){
+                    alert(`Numero negativo ${item}`);
+                }
+            });
+        
+    </script>
+
+</body>
+</html>

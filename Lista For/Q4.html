@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+
+        //Faça um programa que receba um número N do usuário e imprimaos N primeiros termos da seguinte série: 1, 5, 9, 13, 17, 21, ...
+        //Sendo que o primeiro termo é 1 e a razão é 4. Ou seja, o próximo termo é sempre o anterior mais 4.
+        let lista = [];
+        let cont = 1;
+        const calc = (j) =>{
+            
+            for(i=1; i <= j; i++){
+                cont = cont + 4
+                lista.push(cont);   
+            }
+        }
+        j = prompt("Digite um número: ");
+        calc(j);
+        alert(lista);
+
+    </script>
+
+</body>
+</html>

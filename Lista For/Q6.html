@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <script>
+        
+        let nota = 0;
+        let lista = [];
+        for(i=1; i <= 5; i++){
+                console.log("Informe 5 notas");
+                nota = Number(prompt(`Imforme ${i}º nota: `));
+                lista.push(nota);   
+            }
+
+            lista.forEach((nota) => {
+                if(nota >= 7){
+                    alert(`Aprovado`);
+                }else if(nota >=5 && nota < 7){
+                    alert(`Recuperação`);
+                }else{
+                    alert(`Reprovado`);
+                }
+            });
+        
+
+    </script>
+
+</body>
+</html>
