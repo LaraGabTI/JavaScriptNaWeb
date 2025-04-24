@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista">
+        <li id="remover"> massa </li>
+        <li id="item 1"> massa </li>
+        <li id="item 2"> massa </li>
+        <li id="item 3"> massa </li>
+    </ul>
+
+    <script>
+        const lista = document.getElementById("lista")
+        const itens = document.querySelectorAll("li") //pega o elemento com o id remover
+        
+        // lista.remove(itens)
+        
+        itens.forEach(element => {
+            lista.removeChild(element) //remove o item da lista
+        });
+    </script>
+</body>
+</html>

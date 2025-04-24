@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="mensagem">Texto aqui</p>
+    <div class="container">
+        <p>Conteudo</p>
+        <h1>uau</h1>
+    </div>
+
+    <script>
+        //documento HTML é carregado e o DOM é construído
+        const p = document.querySelector(".mensagem")//Ele ta pegando o elemento HTML com a classe mensagem
+        p.innerText = "Alterado com querySelector" //Muda o conteúdo do paragrafo para Alterado com querySelector
+        
+        const container = document.querySelector(".container p")//Ele ta pegando o elemento HTML com a classe container e o p dentro dele
+        container.style.color = "red";
+
+        const paragrafos = document.querySelectorAll("p")
+        alert(paragrafos.length) //Ele retorna uma lista
+    </script>
+</body>
+</html>

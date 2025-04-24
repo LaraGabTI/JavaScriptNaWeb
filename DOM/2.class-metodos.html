@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="destaque">Texto 1</p>
+    <p class="destaque">Texto 2</p>
+
+    <script>
+        //documento HTML é carregado e o DOM é construído
+        const textos = document.getElementsByClassName("destaque")//Ele ta pegando o elemento HTML com a classe destaque
+        textos[0].style.color = "red" //Muda a cor do texto 1 para vermelho
+        textos[1].textContent = "Texto 2 alterado" //Muda o conteúdo do texto 2 para Texto 2 alterado
+        textos[1].style.fontSize = "20px" //Muda o tamanho da fonte do texto 2 para 20px
+    </script>
+</body>
+</html>

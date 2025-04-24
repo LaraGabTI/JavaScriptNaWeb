@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Olá mundo</p>
+
+    <script>
+        //documento HTML é carregado e o DOM é construído
+        // document.getElementById("demo").innerHTML = "Hello JavaScript!";
+
+        //getElementById é um método do DOM que retorna o elemento HTML com o id especificado
+        const paragrafo = document.getElementById("demo")//Ele ta pegando o elemento HTML com o id demo 
+        //innerHTML é uma propriedade do elementoHTML/DOM que define ou retorna o conteúdo HTML de um elemento
+        paragrafo.innerHTML = "Hello JavaScript!" //Muda o conteúdo do paragrafo para Hello JavaScript!
+        paragrafo.innerText = "Texto Alterado" //Muda o conteúdo do paragrafo para Texto Alterado
+        paragrafo.innerHTML = "<strong>Negrito com innerHTML</strong>" //Muda o conteúdo do paragrafo para Negrito com innerHTML
+    </script>
+</body>
+</html>

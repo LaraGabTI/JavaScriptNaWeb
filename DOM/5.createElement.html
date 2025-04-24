@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+
+    <script>
+        //Cria um novo elemento HTML com a tag p
+        const novo = document.createElement("p")
+        novo.innerText = "Novo parágrafo" //Muda o conteúdo do paragrafo para Novo parágrafo
+
+         //appendChild é um método do DOM que adiciona um novo elemento filho ao elemento pai especificado
+        document.body.appendChild(novo)//Adiciona o novo parágrafo ao final do body
+    
+    </script>
+</body>
+</html>

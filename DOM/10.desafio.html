@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <h1> Desafio</h1>
+        <img id="foto" src="Desligada.png"/> <br>
+        <button id="btn">Ligar/Desligar </button>
+    </div>
+
+    <script>
+        const cor = document.querySelector("body")
+        cor.style.backgroundColor = "black" //muda a cor de fundo da página
+        
+        const img = document.getElementById("foto")
+        img.style.width = "300px" 
+        
+        const botao = document.getElementById("btn")
+        botao.style.width = "150px" 
+
+        const h11 = document.querySelector("h1")
+        h11.style.color = "white"
+
+        document.getElementById("btn").addEventListener("click", () => {
+            if(img.getAttribute("src") == "Desligada.png") { //se o atributo src da imagem for igual a Desligada.png
+                img.setAttribute("src", "Ligada.png") //pega/troca o atributo src da imagem
+                cor.style.backgroundColor = "white"
+                h11.style.color = "black"
+            } else {
+                img.setAttribute("src", "Desligada.png") //pega/troca o atributo src da imagem
+                cor.style.backgroundColor = "black"
+                h11.style.color = "white"
+            }
+        });
+    </script>
+</body>
+</html>
