@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <h1> Desafio: Contador de Cliques</h1>
+        <h1 id="contador">0</h1> 
+        <button id="btn"> Clique aqui </button>
+    </div>
+
+    <script>
+
+        const botao = document.getElementById("btn")
+        botao.style.width = "150px" //muda a largura do botão
+        botao.style.height = "50px" //muda a altura do botão
+
+        
+
+        let contador = 0; //variável para contar os cliques
+        document.getElementById("btn").addEventListener("click", () => {
+            contador++;
+            const getContador = document.getElementById("contador")
+            getContador.innerHTML = contador; //atualiza o valor do contador na tela
+        });
+
+    </script>
+</body>
+</html>
