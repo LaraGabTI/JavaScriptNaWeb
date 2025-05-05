@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Lista de tarefas</h1>
-    <section class="container">
+
+    <form>
+        <div class="filter-container">
+            <input type="text" id="filterInput" placeholder="Digite o que deseja buscar">
+        </div>
 
         <ul id="taskList"> </ul> <!-- criando uma lista de tarefas -->
-
-        <div class="input-container">
+        
+        <div class="input-container"> <br>
             <input type="text" id="taskInput" placeholder="Digite sua tarefa">
-            <button id="addBtn">Adicionar</button>
+            <button id="addBtn">Adicionar</button> 
+        </div>  
+    </form>
 
-        </div>
+    <section class="container">
 
     </section>
 

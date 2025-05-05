@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const estudante = {
+            nome: "Lara",
+            idade: 24,
+            cpf: 123123123-12,
+            turma: "front",
+            bolsista: true,
+            telefones: ['88981266085', '88988118849'],
+            media: 7.5,
+            estaAprovado: function(mediaBase) {
+                return this.media >= mediaBase ? true : false
+            }
+        }
+
+        alert(estudante.nome)
+        alert(`Aluno aprovado: ${estudante.estaAprovado(7)}`)
+    </script>
+</body>
+</html>
